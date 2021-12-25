@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Kontakt - Namib Enviro Tours</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="../index.html"><img src="../images/Logo_white.svg" height=40px></a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>Menü</span></a>
+									<div id="menu">
+										<ul>
+											<li><a href="../index.html">Home</a></li>
+								  		<li><a href="../geführte-rundreisen/index.html">Privat geführte Rundreisen</a></li>
+											<li><a href="../über-mich/index.html">Über mich</a></li>
+											<li><a href="../namibia/index.html">Über Namibia</a></li>
+											<li><a href="#">Kontakt</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<article id="main">
+						<header>
+							<h2>Kontakt</h2>
+							<p>Lassen Sie uns gemeinsam Ihren Traumurlaub planen</p>
+						</header>
+						<section class="wrapper style5">
+							<div class="inner">
+								<h4>Ihre Anfrage</h4>
+								<form action="https://usebasin.com/f/d77a86581bca" method="POST" id="my-contact-form">
+									<div class="row gtr-uniform">
+										<div class="col-6 col-12-xsmall">
+											<input type="text" name="name" id="name" value="" placeholder="Name" />
+										</div>
+										<div class="col-6 col-12-xsmall">
+											<input type="email" name="email" id="email" value="" placeholder="E-Mail" />
+										</div>
+										<div class="col-12">
+											<select name="category" id="category">
+												<option value="">- Art der Unterkünfte -</option>
+												<option value="Lodge">Lodges/Gästefarmen</option>
+												<option value="Glamping">Glamping</option>
+												<option value="Camping">Klassisches Camping</option>
+											</select>
+										</div>
+										<!--<div class="col-4 col-12-small">
+											<input type="radio" id="priority-low" name="priority" checked>
+											<label for="priority-low">Low</label>
+										</div>
+										<div class="col-4 col-12-small">
+											<input type="radio" id="priority-normal" name="priority">
+											<label for="priority-normal">Normal</label>
+										</div>
+										<div class="col-4 col-12-small">
+											<input type="radio" id="priority-high" name="priority">
+											<label for="priority-high">High</label>
+										</div>-->
+										<div class="col-6 col-12-small">
+											<input type="text" id="startdate" name="startdate" placeholder="Geplante Anreise" min="2021-12-31" max="2030-12-31"
+									        onfocus="(this.type='date')"
+									        onblur="(this.type='text')">
+											<!--<input type="checkbox" id="copy" name="copy">
+											<label for="copy">Kopie an mich</label>-->
+										</div>
+										<div class="col-6 col-12-small">
+											<select name="length" id="length">
+												<option value="">- Dauer der Reise -</option>
+												<option value="10-14 days">10-14 Tage</option>
+												<option value="2 weeks">2 Wochen</option>
+												<option value="3 weeks">3 Wochen</option>
+											</select>
+											<!--<input type="checkbox" id="demo-human" name="demo-human" checked>
+											<label for="demo-human">Not a robot</label>-->
+										</div>
+										<div class="col-12">
+											<select name="pax" id="pax">
+												<option value="">- Anzahl Reisende -</option>
+												<option value="2">2 Personen</option>
+												<option value="3">3 Personen</option>
+												<option value="4">4 Personen</option>
+												<option value="5">5 Personen</option>
+												<option value="6">6 Personen</option>
+												<option value="7">7 Personen</option>
+												<option value="8">8 Personen</option>
+											</select>
+										</div>
+										<div class="col-12">
+											<textarea name="message" id="message" placeholder="Geben Sie Ihre Nachricht ein" rows="6"></textarea>
+										</div>
+										<div class="col-12">
+											<ul class="actions">
+												<li><input type="submit" value="Abschicken" class="primary" /></li>
+												<li><input type="reset" value="Zurücksetzen" /></li>
+											</ul>
+										</div>
+										<div id="form-message">&nbsp;</div>
+									</div>
+								</form>
+								<script type="text/javascript">
+									var form = document.getElementById("my-contact-form");
+									var formMessage = document.getElementById("form-message");
+									form.onsubmit = function(event) {
+									event.preventDefault();
+									var formData = new FormData(form);
+									var xhr = new XMLHttpRequest();
+									xhr.open("POST", form.action, true);
+									xhr.onload = function(e) {
+									console.log(xhr);
+									var response = JSON.parse(xhr.response);
+									if (xhr.status === 200) {
+									formMessage.innerHTML = "<strong>Ihre Anfrage wurde erfolgreich versendet!</strong>";
+									} else {
+									formMessage.innerHTML = "Fehler: " + response.error;
+									}
+									};
+									xhr.send(formData);
+									};
+								</script>
+								<hr />
+
+								<h3>Wenn ich auf Tour bin ...</h3>
+								<p>... kann es etwas dauern, bis ich antworte, weil ich mich in erster Linie natürlich um meine Gäste kümmere und ich außerdem unterwegs oft kein oder kein gutes Internet habe. Schreiben Sie mir gern auf WhatsApp eine Nachricht, falls es dringend ist.</p>
+
+							</div>
+						</section>
+					</article>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="https://facebook.com/namibiasafari" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="https://instagram.com/namibenvirotours" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="mailto:raini&commat;namibenvirotours&period;com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Namib Enviro Tours</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
