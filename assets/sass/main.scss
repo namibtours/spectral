@@ -1475,7 +1475,7 @@
 	#header {
 		@include vendor('transition', 'background-color #{_duration(transitions)} ease');
 		background: _palette(bg);
-		height: 3em;
+		height: 3.5em;
 		left: 0;
 		line-height: 3em;
 		position: fixed;
@@ -1483,17 +1483,19 @@
 		width: 100%;
 		z-index: _misc(z-index-base);
 
-		h1 {
+		div {
 			@include vendor('transition', 'opacity #{_duration(transitions)} ease');
 			height: inherit;
 			left: 1.25em;
 			line-height: inherit;
 			position: absolute;
 			top: 0;
+			display: flex;
 
 			a {
 				border: 0;
-				display: block;
+				display: flex;
+				align-items: center;
 				height: inherit;
 				line-height: inherit;
 
@@ -1509,16 +1511,33 @@
 			position: absolute;
 			right: 0;
 			top: 0;
+			display: flex;
 
 			> ul {
 				list-style: none;
 				margin: 0;
 				padding: 0;
 				white-space: nowrap;
+				display: flex;
+				align-items: center;
 
 				> li {
 					display: inline-block;
 					padding: 0;
+					
+					&#langSwitch {
+						display: flex;
+						align-items: center;
+						button {
+							box-shadow: none;
+							padding: 5px;
+							height: unset;
+							line-height: 2;
+							&:not(.active) {
+								opacity: 0.3;
+							}
+						}
+					}
 
 					> a {
 						border: 0;
@@ -1567,11 +1586,6 @@
 
 		&.alt {
 			background: transparent;
-
-			h1 {
-				@include vendor('pointer-events', 'none');
-				opacity: 0;
-			}
 		}
 	}
 

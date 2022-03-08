@@ -3446,16 +3446,17 @@ input, select, textarea {
 		-ms-transition: background-color 0.2s ease;
 		transition: background-color 0.2s ease;
 		background: #2e3842;
-		height: 3em;
+		height: 3.5em;
 		left: 0;
 		line-height: 3em;
+		display: flex;
 		position: fixed;
 		top: 0;
 		width: 100%;
 		z-index: 10000;
 	}
 
-		#header h1 {
+		#header div {
 			-moz-transition: opacity 0.2s ease;
 			-webkit-transition: opacity 0.2s ease;
 			-ms-transition: opacity 0.2s ease;
@@ -3465,18 +3466,20 @@ input, select, textarea {
 			line-height: inherit;
 			position: absolute;
 			top: 0;
+			display: flex;
 		}
 
-			#header h1 a {
+			#header div a {
 				border: 0;
-				display: block;
+				display: flex;
+				align-items: center;
 				height: inherit;
 				line-height: inherit;
 			}
 
 				@media screen and (max-width: 736px) {
 
-					#header h1 a {
+					#header div a {
 						font-size: 0.8em;
 					}
 
@@ -3488,6 +3491,7 @@ input, select, textarea {
 			position: absolute;
 			right: 0;
 			top: 0;
+			display: flex;
 		}
 
 			#header nav > ul {
@@ -3495,11 +3499,29 @@ input, select, textarea {
 				margin: 0;
 				padding: 0;
 				white-space: nowrap;
+				display: flex;
+				align-items: center;
 			}
 
 				#header nav > ul > li {
 					display: inline-block;
 					padding: 0;
+				}
+
+				#header nav > ul > li#langSwitch {
+					display: flex;
+					align-items: center;
+				}
+
+				#header nav > ul > li#langSwitch > button {
+					box-shadow: none;
+					padding: 5px;
+					height: unset;
+					line-height: 2;
+				}
+
+				#header nav > ul > li#langSwitch > button:not(.active) {
+					opacity: 0.3;
 				}
 
 					#header nav > ul > li > a {
@@ -3555,11 +3577,6 @@ input, select, textarea {
 		#header.alt {
 			background: transparent;
 		}
-
-			#header.alt h1 {
-				pointer-events: none;
-				opacity: 0;
-			}
 
 /* Banner */
 
