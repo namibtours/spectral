@@ -4070,7 +4070,7 @@ input, select, textarea {
 .plane svg {
 	width: 30px;
 	height: 30px;
-	transform: rotate(-55deg) translateX(-2px);
+	transform: rotate(45deg) translateX(-2px);
 }
 
 @media screen and (min-width: 768px) {

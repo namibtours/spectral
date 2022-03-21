@@ -1,7 +1,7 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoibmFtaWJ0b3VycyIsImEiOiJja3hvbWFhNGMyNzh0MnFwZTJleXQyanFjIn0.4w-RQFfS0Zy9vSxG8ZxJkQ';
 const map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
+    style: 'mapbox://styles/namibtours/cl10f79ku000i14s7kw2io7y5',
     center: [16, -20.8],
     zoom: 5.5
 });
@@ -73,7 +73,7 @@ midPoints.forEach(function (point, index) {
 const planeIcon = document.createElement('div');
 
 planeIcon.className = 'plane';
-planeIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" id="airport-15" width="21" height="21" viewBox="0 0 21 21"><g><path d="M0,0 H21 V21 H0 Z" fill="none"></path><path d="M18 9.818V11.5l-6.5-1-0.318 4.773L14 17v1l-3.5-0.682L7 18v-1l2.818-1.727L9.5 10.5 3 11.5V9.818L9.5 7.5v-3s0-1.5 1-1.5 1 1.5 1 1.5v2.818l6.5 2.5z" fill="black" stroke="hsl(135, 22%, 100%)" stroke-linejoin="round" stroke-miterlimit="4px" stroke-width="2"></path><path d="M18 9.818V11.5l-6.5-1-0.318 4.773L14 17v1l-3.5-0.682L7 18v-1l2.818-1.727L9.5 10.5 3 11.5V9.818L9.5 7.5v-3s0-1.5 1-1.5 1 1.5 1 1.5v2.818l6.5 2.5z" fill="black"></path></g></svg>`
+planeIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" id="airport-15" width="21" height="21" viewBox="0 0 21 21"><g><path d="M0,0 H21 V21 H0 Z" fill="none"></path><path d="M18 9.818V11.5l-6.5-1-0.318 4.773L14 17v1l-3.5-0.682L7 18v-1l2.818-1.727L9.5 10.5 3 11.5V9.818L9.5 7.5v-3s0-1.5 1-1.5 1 1.5 1 1.5v2.818l6.5 2.5z" fill="black" stroke="hsl(135, 22%, 100%)" stroke-linejoin="round" stroke-miterlimit="4px" stroke-width="2"></path><path d="M18 9.818V11.5l-6.5-1-0.318 4.773L14 17v1l-3.5-0.682L7 18v-1l2.818-1.727L9.5 10.5 3 11.5V9.818L9.5 7.5v-3s0-1.5 1-1.5 1 1.5 1 1.5v2.818l6.5 2.5z" fill="#693"></path></g></svg>`
 new mapboxgl.Marker(planeIcon)
     .setLngLat([17.46329590140578, -22.487406703313916])
     .addTo(map);
@@ -175,6 +175,9 @@ map.on('load', function () {
 
         // Request the next frame of animation as long as the end has not been reached
         if (counter < steps) {
+            requestAnimationFrame(animate);
+        } else {
+            counter = 0
             requestAnimationFrame(animate);
         }
 
