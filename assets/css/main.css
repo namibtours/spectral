@@ -3585,10 +3585,10 @@ input, select, textarea {
 
 		@media screen and (min-width: 1024px) {
 			#header:not(.scrolling) {
-				height: 6em;
+				height: 5em;
 			}
 			#header:not(.scrolling) img {
-				height: 80px;
+				height: 55px;
 			}
 		}
 
