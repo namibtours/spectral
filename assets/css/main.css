@@ -3454,6 +3454,7 @@ input, select, textarea {
 		top: 0;
 		width: 100%;
 		z-index: 10000;
+		transition: height 0.3s ease;
 	}
 
 		#header div {
@@ -3467,6 +3468,10 @@ input, select, textarea {
 			position: absolute;
 			top: 0;
 			display: flex;
+		}
+
+		#header img {
+			transition: height 0.3s;
 		}
 
 			#header div a {
@@ -3576,6 +3581,15 @@ input, select, textarea {
 
 		#header.alt {
 			background: transparent;
+		}
+
+		@media screen and (min-width: 1024px) {
+			#header:not(.scrolling) {
+				height: 5em;
+			}
+			#header:not(.scrolling) img {
+				height: 55px;
+			}
 		}
 
 /* Banner */

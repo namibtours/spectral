@@ -138,6 +138,16 @@
 		});
 
 	// Header.
+	$window.on('scroll', function () {
+		if ($header) {
+			if (window.scrollY > 100) {
+				$header.addClass('scrolling')
+			} else {
+				$header.removeClass('scrolling')
+			}
+		}
+	})
+
 	if ($banner.length > 0
 		&& $header.hasClass('alt')) {
 
