@@ -3461,7 +3461,7 @@ input, select, textarea {
 			-moz-transition: opacity 0.2s ease;
 			-webkit-transition: opacity 0.2s ease;
 			-ms-transition: opacity 0.2s ease;
-			transition: opacity 0.2s ease;
+			transition: opacity 0.2s ease, transform 0.5s, left 0.5s;
 			height: inherit;
 			left: 1.25em;
 			line-height: inherit;
@@ -3584,6 +3584,23 @@ input, select, textarea {
 		}
 
 		@media screen and (min-width: 1024px) {
+			.landing #header div {
+				left: 50%;
+				transform: translateX(-50%);
+				transform-origin: center;
+			}
+			.landing #header:not(.scrolling) img {
+				height: 175px;
+				position: relative;
+				top: 50%;
+			}
+			.landing #header.scrolling img {
+				height: 40px;
+			}
+			.landing #header.scrolling div {
+				left: 1.5em;
+				transform: translateX(0);
+			}
 			#header:not(.scrolling) {
 				height: 6em;
 			}
@@ -3609,7 +3626,7 @@ input, select, textarea {
 		justify-content: center;
 		cursor: default;
 		height: 100vh;
-		min-height: 35em;
+		min-height: 45em;
 		overflow: hidden;
 		position: relative;
 		text-align: center;
