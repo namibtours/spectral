@@ -1683,6 +1683,8 @@ body.is-menu-visible {
 					text-transform: uppercase;
 
 					&.menuToggle {
+						display: flex;
+						align-items: center;
 						outline: 0;
 						position: relative;
 
@@ -1693,8 +1695,9 @@ body.is-menu-visible {
 							content: "";
 							display: inline-block;
 							height: 3.75em;
-							vertical-align: top;
 							width: 2em;
+							position: relative;
+							top: 0.05em;
 						}
 
 						@include breakpoint("<=small") {
@@ -2104,6 +2107,7 @@ body.is-mobile {
 	background-color: #fff;
 	color: #2E3842;
 	border-radius: 0;
+	box-shadow: none !important;
 }
 .map-toggler.active svg {
 	transform: rotate(45deg);
@@ -2123,7 +2127,7 @@ body.is-mobile {
 .map-wrapper {
 	position: relative;
 	max-width: 750px;
-	margin: 0 auto;
+	margin: 0 auto 20px;
 	padding-bottom: 100%;
 	overflow: hidden;
 }

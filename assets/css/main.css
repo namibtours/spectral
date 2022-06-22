@@ -3542,6 +3542,8 @@ input, select, textarea {
 						#header nav > ul > li > a.menuToggle {
 							outline: 0;
 							position: relative;
+							display: flex;
+							align-items: center;
 						}
 
 							#header nav > ul > li > a.menuToggle:after {
@@ -3551,8 +3553,9 @@ input, select, textarea {
 								content: '';
 								display: inline-block;
 								height: 3.75em;
-								vertical-align: top;
 								width: 2em;
+								position: relative;
+								top: 0.05em;
 							}
 
 							@media screen and (max-width: 736px) {
@@ -4059,6 +4062,7 @@ input, select, textarea {
 	background-color: #fff;
 	color: #2E3842;
 	border-radius: 0;
+	box-shadow: none !important;
 }
 .map-toggler.active svg {
 	transform: rotate(45deg);
@@ -4078,7 +4082,7 @@ input, select, textarea {
 .map-wrapper {
 	position: relative;
 	max-width: 750px;
-	margin: 0 auto;
+	margin: 0 auto 20px;
 	padding-bottom: 100%;
 	overflow: hidden;
 }
