@@ -2152,6 +2152,13 @@ body.is-mobile {
 	overflow: hidden;
 	transition: max-height 0.3s;
 }
+.map-content-inner {
+	max-width: 43.5em;
+	margin: 20px auto 0;
+}
+.map-content-inner p {
+	margin-bottom: 16px;
+}
 .map {
 	position: absolute !important;
 	top: 0;
